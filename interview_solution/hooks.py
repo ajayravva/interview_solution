@@ -5,6 +5,21 @@ app_description = "Frappe Interview Assignment"
 app_email = "ajayravva001@gmail.com"
 app_license = "mit"
 
+fixtures = [
+    {
+        "dt": "DocType",
+        "filters": [
+            ["name", "in", ["Customer Visit"]]
+        ]
+    },
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["dt", "=", "Customer Visit"]
+        ]
+    }
+]
+
 # Apps
 # ------------------
 
