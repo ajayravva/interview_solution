@@ -31,3 +31,34 @@ Pre-commit is configured to use the following tools for checking and formatting 
 ### License
 
 mit
+
+
+# Interview Solution – Frappe Assignment
+
+This repository contains the solution for the Frappe developer interview assignment.
+
+## Setup Instructions
+
+1. Install Frappe Bench
+
+bench init frappe-bench
+cd frappe-bench
+
+2. Create a new site
+
+bench new-site site1.local
+
+3. Get the custom app
+
+bench get-app https://github.com/ajayravva/interview_solution.git
+
+4. Install the app
+
+bench --site site1.local install-app interview_solution
+
+5. Start the server
+
+bench start
+
+Open in browser:
+http://localhost:8000
