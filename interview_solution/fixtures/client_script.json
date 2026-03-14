@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Customer Visit",
+  "enabled": 1,
+  "modified": "2026-03-12 12:31:07.838106",
+  "module": "Interview Solution",
+  "name": "Customer Visit Duration Script",
+  "script": "frappe.ui.form.on('Customer Visit', {\r\n\r\n    checkout_time: function(frm) {\r\n\r\n        if (frm.doc.checkin_time && frm.doc.checkout_time) {\r\n\r\n            let checkin = new Date(frm.doc.checkin_time);\r\n            let checkout = new Date(frm.doc.checkout_time);\r\n\r\n            let diff = (checkout - checkin) / (1000 * 60 * 60);\r\n\r\n            frm.set_value('visit_duration', diff);\r\n\r\n        }\r\n\r\n    }\r\n\r\n});",
+  "view": "Form"
+ }
+]
